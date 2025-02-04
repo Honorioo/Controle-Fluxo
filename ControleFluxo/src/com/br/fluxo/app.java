@@ -8,9 +8,9 @@ import com.br.fluxo.execption.ParametrosInvalidosException;
 public class app {
 	public static void main(String[] args) {
 		Scanner terminal = new Scanner(System.in);
-		System.out.println("Digite o primeiro parâmetro");
+		System.out.print("Digite o primeiro parâmetro: ");
 		int parametroUm = terminal.nextInt();
-		System.out.println("Digite o segundo parâmetro");
+		System.out.print("Digite o segundo parâmetro: ");
 		int parametroDois = terminal.nextInt();
 		
 		try {
@@ -26,7 +26,7 @@ public class app {
 		//validar se parametroUm é MAIOR que parametroDois e lançar a exceção
 		
 		if(parametroUm > parametroDois) {
-			System.out.println("O segundo parâmetro deve ser maior que o primeiro");
+	        throw new ParametrosInvalidosException("O segundo parâmetro deve ser maior que o primeiro.");
 		}
 		
 		int contagem = parametroDois - parametroUm;
